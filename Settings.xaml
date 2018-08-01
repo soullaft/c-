@@ -1,0 +1,54 @@
+﻿<Controls:MetroWindow x:Class="Vesna.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:Vesna"
+        mc:Ignorable="d"
+                      xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+                      WindowStartupLocation="CenterScreen"
+        Height="450" Width="270">
+    <StackPanel HorizontalAlignment="Center" Orientation="Vertical">
+
+        <TextBlock Text="Настройки подключения" FontSize="18"
+                   Margin="0,10,0,0"/>
+
+        <StackPanel Orientation="Horizontal" Margin="0, 100, 0, 0" HorizontalAlignment="Center">
+            <TextBox Controls:TextBoxHelper.ClearTextButton="True" Width="170" x:Name="server">
+                <TextBox.ToolTip>
+                    <TextBlock Text="Сервер" Opacity="0.9"/>
+                </TextBox.ToolTip>
+            </TextBox>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0,20,0,0" HorizontalAlignment="Center">
+            <TextBox Controls:TextBoxHelper.ClearTextButton="True" Width="170" x:Name="database">
+                <TextBox.ToolTip>
+                    <TextBlock Text="База данных" Opacity="0.9"/>
+                </TextBox.ToolTip>
+            </TextBox>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0,20,0,0" HorizontalAlignment="Center">
+            <TextBox Controls:TextBoxHelper.ClearTextButton="True" Width="170" x:Name="user">
+                <TextBox.ToolTip>
+                    <TextBlock Text="Пользователь" Opacity="0.9"/>
+                </TextBox.ToolTip>
+            </TextBox>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0,20,0,0" HorizontalAlignment="Center">
+            <PasswordBox Controls:TextBoxHelper.ClearTextButton="True" Width="170" x:Name="password">
+                <PasswordBox.ToolTip>
+                    <TextBlock Text="Пароль" Opacity="0.9"/>
+                </PasswordBox.ToolTip>
+            </PasswordBox>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0,20,0,0" HorizontalAlignment="Right">
+            <Button Content="Отменить" Click="CloseWindow_Click"/>
+            <Button Content="Сохранить" Click="Button_Click"/>
+        </StackPanel>
+    </StackPanel>
+</Controls:MetroWindow>
